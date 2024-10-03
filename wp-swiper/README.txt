@@ -81,6 +81,9 @@ Alternatively, you can install the plugin manually by downloading the plugin fro
 
 == Changelog ==
 
+= 1.2.1 =
+* Missing files
+
 = 1.2.0 =
 * **Enhanced Swiper Configuration**: Swiper settings are now loaded through a single HTML element attribute (`data-swiper`), simplifying the previous method that relied on multiple `data` attributes.
 * **Deprecation Warning:** The legacy method of using multiple data-attributes will remain functional but is scheduled for deprecation in future releases. Please note that this legacy mode only works for manually updated data-attributes—updates made via Gutenberg will not affect these attributes. If you prefer to keep using the old method, do not upgrade to version 1.2.0 and continue using version 1.1.3, which is still available for download. You can also enable the old WP Swiper script (which will no longer receive updates) via Settings > WP Swiper.
