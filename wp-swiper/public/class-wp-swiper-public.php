@@ -111,7 +111,7 @@ class WP_Swiper_Public
 			$this->loadWpSwiper();
 		} else {
 			if (function_exists('register_block_type')) {
-				if ($load_swiper && (has_block('da/wp-swiper-slides') || strpos($post->post_content, 'wp-swiper') !== false)) {
+				if (!$load_swiper && (has_block('da/wp-swiper-slides') || strpos($post->post_content, 'wp-swiper') !== false)) {
 					$this->loadWpSwiper();
 				}
 			}
@@ -149,13 +149,12 @@ class WP_Swiper_Public
 
 		if ($legacy_toggle) {
 			wp_register_script(
-				$this->plugin_name . '-frontend-js',
+				$this->plugin_name . '-frontend-legacy-js',
 				plugin_dir_url(__DIR__) . 'gutenberg/js/frontend_block_legacy.js',
 				array($this->plugin_name . '-bundle-js'),
 				DAWPS_PLUGIN_VERSION
 			);
 		} else {
-
 			wp_register_script(
 				$this->plugin_name . '-frontend-js',
 				plugin_dir_url(__DIR__) . 'gutenberg/js/frontend_block.js',
