@@ -105,13 +105,28 @@ class WP_Swiper_Public
 		global $post;
 		$options = get_option('wp_swiper_options');
 		$load_swiper = isset($options['enqueue_swiper']) && $options['enqueue_swiper'] === 'on';
+		$debug_swiper = isset($options['debug_swiper']) && $options['debug_swiper'] === 'on';
 
+		if($debug_swiper) {
+			echo '<div class="wp-swiper-debug" style="display:none">';
+			var_dump([
+				'wp_swiper_version' => DAWPS_PLUGIN_VERSION,
+				'load_swiper' => $load_swiper,
+				'has_block_wp_swiper_slides' => has_block('da/wp-swiper-slides'),
+				'found_wp_swiper_class' => isset($post->post_content) ? strpos($post->post_content, 'wp-swiper') : false
+			]);
+			echo '</div>';
+		}
+		
 		// Check if the current post contains the Swiper Gutenberg block and the option is enabled
 		if (true === $load_swiper) {
 			$this->loadWpSwiper();
 		} else {
 			if (function_exists('register_block_type')) {
-				if (!$load_swiper && (has_block('da/wp-swiper-slides') || strpos($post->post_content, 'wp-swiper') !== false)) {
+				if (
+					!$load_swiper && 
+					(has_block('da/wp-swiper-slides') || (isset($post->post_content) && strpos($post->post_content, 'wp-swiper') !== false))
+				) {
 					$this->loadWpSwiper();
 				}
 			}
