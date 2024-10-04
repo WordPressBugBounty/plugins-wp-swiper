@@ -80,6 +80,8 @@ Alternatively, you can install the plugin manually by downloading the plugin fro
 
 
 == Changelog ==
+= 1.2.4 =
+* Fix legacy code toggle
 
 = 1.2.3 =
 * fixed condition on swiper load

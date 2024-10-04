@@ -69,7 +69,7 @@ if (! class_exists('WP_Swiper_Settings')) {
 			<input type='checkbox' name='wp_swiper_options[legacy_toggle]' <?php echo $checked; ?> value='on'>
 			<label for='wp_swiper_options[legacy_toggle]'><?php _e('Enable legacy code', 'wp_swiper'); ?></label>
 			<p class="description">
-                <?php _e( 'Legacy code relies on embedding configuration details directly into the HTML elements through data attributes, which is a more traditional approach. The newer implementation uses a modern technique where a JavaScript object (in JSON format) is passed to configure Swiper. This method allows for greater flexibility and is generally easier to maintain and scale.', 'wp_swiper' ); ?>
+                <?php _e( 'TO BE DEPRECATED. I adivce that you transition away using legacy code at some point. Legacy code relies on embedding configuration details directly into the HTML elements through data attributes, which is a more traditional approach. The newer implementation uses a modern technique where a JavaScript object (in JSON format) is passed to configure Swiper. This method allows for greater flexibility and is generally easier to maintain and scale.', 'wp_swiper' ); ?>
             </p>
 			
 		<?php

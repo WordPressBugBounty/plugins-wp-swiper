@@ -145,11 +145,12 @@ class WP_Swiper_Public
 			$this->plugin_name . '-bundle-js'
 		);
 
+		$options = get_option('wp_swiper_options');
 		$legacy_toggle = isset($options['legacy_toggle']) && $options['legacy_toggle'] === 'on';
 
 		if ($legacy_toggle) {
 			wp_register_script(
-				$this->plugin_name . '-frontend-legacy-js',
+				$this->plugin_name . '-frontend-js',
 				plugin_dir_url(__DIR__) . 'gutenberg/js/frontend_block_legacy.js',
 				array($this->plugin_name . '-bundle-js'),
 				DAWPS_PLUGIN_VERSION
