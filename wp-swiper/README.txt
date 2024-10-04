@@ -80,6 +80,12 @@ Alternatively, you can install the plugin manually by downloading the plugin fro
 
 
 == Changelog ==
+= 1.2.6 =
+* Added a debugging tool that allows users to reset slide slugs for each slide, ensuring proper synchronization with slide data in the parent block.
+
+= 1.2.5 =
+* Fix breakpoints
+
 = 1.2.4 =
 * Fix legacy code toggle
 
