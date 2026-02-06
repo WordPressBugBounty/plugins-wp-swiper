@@ -1,4 +1,5 @@
 {
+  "apiVersion": 3,
   "name": "da/wp-swiper-slides",
   "category": "media",
   "supports": {
@@ -14,9 +15,6 @@
     "align": {
       "type": "string",
       "default": ""
-    },
-    "txtColor": {
-      "type": "string"
     },
     "overlayColor": {
       "type": "object",
@@ -69,6 +67,18 @@
       "type": "boolean",
       "default": false
     },
+    "reverseDirection": {
+      "type": "boolean",
+      "default": false
+    },
+    "stopOnLastSlide": {
+      "type": "boolean",
+      "default": false
+    },
+    "waitForTransition": {
+      "type": "boolean",
+      "default": true
+    },
     "navigation": {
       "type": "boolean",
       "default": true
@@ -84,6 +94,14 @@
     "loop": {
       "type": "boolean",
       "default": false
+    },
+    "loopAddBlankSlides": {
+      "type": "boolean",
+      "default": true
+    },
+    "loopAdditionalSlides": {
+      "type": "number",
+      "default": 0
     },
     "effect": {
       "type": "string",
@@ -116,6 +134,10 @@
     "spaceBetween": {
       "type": "number",
       "default": 0
+    },
+    "autoSlideWidth": {
+      "type": "boolean",
+      "default": false
     },
     "slidesOffsetBefore": {
       "type": "number",
@@ -155,11 +177,39 @@
       "type": "boolean",
       "default": true
     },
+    "sliderHeight": {
+      "type": "string",
+      "default": "500px"
+    },
     "freeMode": {
       "type": "boolean",
       "default": false
     },
-    "sticky": {
+    "freeModeMinimumVelocity": {
+      "type": "number",
+      "default": 0.02
+    },
+    "freeModeMomentum": {
+      "type": "boolean",
+      "default": true
+    },
+    "freeModeMomentumBounce": {
+      "type": "boolean",
+      "default": true
+    },
+    "freeModeMomentumBounceRatio": {
+      "type": "number",
+      "default": 1
+    },
+    "freeModeMomentumRatio": {
+      "type": "number",
+      "default": 1
+    },
+    "freeModeMomentumVelocityRatio": {
+      "type": "number",
+      "default": 1
+    },
+    "freeModeSticky": {
       "type": "boolean",
       "default": false
     },
@@ -170,6 +220,18 @@
     "direction": {
       "type": "string",
       "default": "horizontal"
+    },
+    "overflowVisible": {
+      "type": "boolean",
+      "default": false
+    },
+    "navigationColor": {
+      "type": "string",
+      "default": ""
+    },
+    "paginationColor": {
+      "type": "string",
+      "default": ""
     }
   }
 }
