@@ -3,7 +3,7 @@ Contributors: digitalapps
 Donate link: https://www.buymeacoffee.com/wpplugins
 Tags: swiper, carousel, slider block, carousel block, swiper block
 Requires at least: 3.0.1
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 1.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -146,10 +146,17 @@ Alternatively, you can install the plugin manually by downloading the plugin fro
 2. Activate the plugin through the ‘Plugins’ menu in WordPress.
 3. Customize the plugin from the menu by selecting WP Swiper in the sidebar.
 
+== Screenshots ==
+
+1. Build and configure a responsive slider directly in the WordPress block editor.
+2. Select a slide to manage its background image, thumbnail, focal point, and content blocks.
+3. A published WP Swiper slider with navigation and clickable pagination.
 
 == Changelog ==
 = 1.4.4 =
-* Editor UI improvements
+* Improved the editor UI and slide controls
+* Refreshed WordPress.org screenshots
+* Tested with WordPress 7.0
 
 = 1.4.3 =
 * **Added Media Library Selection**: Introduced "Select Images from Media Library" button as a secondary method to create slides
