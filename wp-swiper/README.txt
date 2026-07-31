@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/wpplugins
 Tags: swiper, carousel, slider block, carousel block, swiper block
 Requires at least: 6.3
 Tested up to: 7.0
-Stable tag: 1.4.8
+Stable tag: 1.4.9
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,14 @@ Build responsive Swiper carousels with images, media, and nested WordPress block
 * Drag image files into the editor to create slides.
 * Load frontend assets only when a slider is detected, with an optional global-loading setting for custom setups.
 * Use the bundled Swiper 14 runtime without a jQuery dependency.
+
+= Accessibility =
+
+Since version 1.4.6, WP Swiper removes non-visible slides from the accessibility tree and keyboard tab order. Focusable content is restored when its slide becomes visible, including in responsive layouts that display multiple slides.
+
+This behavior addresses one carousel accessibility barrier, but it is not a certification that WP Swiper or a website using it conforms to WCAG. Conformance must be evaluated for the complete published page and depends on the carousel configuration, slide content, theme, and other integrations.
+
+Site authors remain responsible for accessible content and configuration. Provide meaningful image alternatives, logical headings, readable contrast, and clear control labels. If autoplay is enabled, enable the pause/play control so users can stop rotation. Rotation stops when keyboard focus enters the carousel and restarts only after an explicit user request. See the [W3C carousel accessibility guidance](https://www.w3.org/WAI/tutorials/carousels/).
 
 = Privacy =
 
@@ -105,6 +113,13 @@ Please report security issues privately according to the [security policy](https
 3. A published WP Swiper slider with navigation and clickable pagination.
 
 == Changelog ==
+
+= 1.4.9 =
+
+* Restored block editor compatibility with WordPress 6.3 by using compatible JSX output.
+* Added accessible names to the editor controls for adding and removing slides.
+* Removed editor warnings caused by deprecated Popover and SVG properties.
+* Expanded automated coverage for packaged editor, frontend, and legacy block behavior.
 
 = 1.4.8 =
 
